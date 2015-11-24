@@ -8,18 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let textFieldView = TextFieldView(frame: CGRect.zero)
+        view.addSubview(textFieldView)
+        textFieldView.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(60)
+            make.right.left.equalTo(0)
+            make.height.equalTo(44)
+        }
+                
     }
-
+    
+       
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
